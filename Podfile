@@ -10,10 +10,14 @@ target 'HeyBunny' do
   target 'HeyBunnyTests' do
     inherit! :search_paths
     # Pods for testing
+  pod 'RxTest'
   end
 
   target 'HeyBunnyUITests' do
     # Pods for testing
   end
+  pod 'RxSwift'
+  pod 'SnapKit'
+  pod 'Moya/RxSwift'
 
 end
