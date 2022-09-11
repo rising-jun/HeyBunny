@@ -10,6 +10,7 @@
 		11FA6B5F5A50553C6E6E7D62 /* Pods_HeyBunny_HeyBunnyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949D3428D7119DFBB415A634 /* Pods_HeyBunny_HeyBunnyUITests.framework */; };
 		4D717A92E381A617CA55D615 /* Pods_HeyBunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB833556110842C6BB142DE /* Pods_HeyBunny.framework */; };
 		50AEF392488BB81C182D96ED /* Pods_HeyBunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49B47782F0918F20351210 /* Pods_HeyBunnyTests.framework */; };
+		724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A896228CDB72400532575 /* BunnyViewModel.swift */; };
 		7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516028CB23FA007322FD /* NewsRepositoryTests.swift */; };
 		7257516428CB2751007322FD /* NewServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516328CB2751007322FD /* NewServiceStub.swift */; };
 		7257516628CB276E007322FD /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516528CB276E007322FD /* NewsService.swift */; };
@@ -53,6 +54,7 @@
 		226FDC72EC9024950B56EB37 /* Pods-HeyBunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeyBunnyTests/Pods-HeyBunnyTests.release.xcconfig"; sourceTree = "<group>"; };
 		40508C30C5C934B28D5ED6E0 /* Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunny-HeyBunnyUITests/Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		498630D3313B0A7CC557F52E /* Pods-HeyBunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunnyTests/Pods-HeyBunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		724A896228CDB72400532575 /* BunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewModel.swift; sourceTree = "<group>"; };
 		7257516028CB23FA007322FD /* NewsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepositoryTests.swift; sourceTree = "<group>"; };
 		7257516328CB2751007322FD /* NewServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceStub.swift; sourceTree = "<group>"; };
 		7257516528CB276E007322FD /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		724A896128CDB62900532575 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				724A896228CDB72400532575 /* BunnyViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */,
 				7257517828CB48A5007322FD /* BunnyUsecase.swift in Sources */,
 				72C6232828CB1DD90023A368 /* ViewController.swift in Sources */,
 				72C6232428CB1DD90023A368 /* AppDelegate.swift in Sources */,

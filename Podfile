@@ -17,6 +17,7 @@ target 'HeyBunny' do
     # Pods for testing
   end
   pod 'RxSwift'
+  pod 'RxRelay'
   pod 'SnapKit'
   pod 'Moya/RxSwift'
 
