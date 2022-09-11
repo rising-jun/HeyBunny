@@ -7,11 +7,22 @@
 
 import RxSwift
 
-final class NewsRepository {
+final class NewsRepositoryImpl {
     let koreaNewsService: NewsService = NewsServiceImpl()
 }
-extension NewsRepository {
+extension NewsRepositoryImpl: NewsRepository {
     func requestKoreaNewsAPI() -> Single<News> {
         koreaNewsService.getKoreaNewsAPI()
     }
+    
+    func fetchImages(url: String) async throws -> Data {
+        guard let url = URL(string: url) else { return Data() }
+        let imageData = try await ImageManager.shared.fetchImage(from: url)
+        return imageData
+    }
+}
+
+protocol NewsRepository {
+    func requestKoreaNewsAPI() -> Single<News>
+    func fetchImages(url: String) async throws -> Data
 }
