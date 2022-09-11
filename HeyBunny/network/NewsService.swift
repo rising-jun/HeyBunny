@@ -30,7 +30,6 @@ final class NewsServiceImpl: NewsService {
             let task = self.provider.request(.topHeadlines, completion: { result in
                 switch result {
                 case .success(let response):
-                    print(String(data: response.data,encoding: .utf8))
                     if let decodeData = try? self.decode(from: response.data, parsingType: News.self) {
                         single(.success(decodeData))
                     } else { single(.failure(NetworkError.parsing)) }
