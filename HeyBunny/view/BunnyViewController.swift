@@ -86,8 +86,6 @@ extension BunnyViewController {
         newsTableView.delegate = self
         newsTableView.allowsSelection = false
         newsTableView.allowsSelectionDuringEditing = true
-        
-        
     }
     
     private func setLayout() {
