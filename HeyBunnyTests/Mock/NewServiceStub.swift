@@ -18,7 +18,6 @@ final class NewsServiceStub: NewsService {
     }
     
     func getKoreaNewsAPI() -> Single<News> {
-        print("hello")
         return Single<News>.create { [weak self] single in
             guard let self = self else { return Disposables.create { } }
             if self.result {

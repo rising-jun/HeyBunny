@@ -12,14 +12,15 @@ struct News: Codable {
 }
 
 struct Article: Codable {
+    let author: String?
     let title: String
-    let description: String
+    let description: String?
     let url: String
-    let urlToImage: String
+    let urlToImage: String?
     let publishedAt: String
-    let content: String
-    
+    let content: String?
+
     func convertArticleEntity() -> ArticleEntity {
-        return ArticleEntity(title: title, description: description, url: url, urlToImage: urlToImage, publishedAt: publishedAt, content: content)
+        return ArticleEntity(title: title, description: description ?? "", url: url, urlToImage: urlToImage ?? "", publishedAt: publishedAt, content: content ?? "")
     }
 }
