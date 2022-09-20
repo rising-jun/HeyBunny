@@ -8,7 +8,7 @@
 import RxSwift
 
 final class NewsRepositoryImpl {
-    let koreaNewsService: NewsService = NewsServiceImpl()
+    var koreaNewsService: NewsService = NewsServiceImpl()
 }
 extension NewsRepositoryImpl: NewsRepository {
     func requestKoreaNewsAPI() -> Single<News> {
@@ -23,6 +23,7 @@ extension NewsRepositoryImpl: NewsRepository {
 }
 
 protocol NewsRepository {
+    var koreaNewsService: NewsService { get set }
     func requestKoreaNewsAPI() -> Single<News>
     func fetchImages(url: String) async throws -> Data
 }

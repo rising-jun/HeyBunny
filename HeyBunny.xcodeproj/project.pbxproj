@@ -12,6 +12,9 @@
 		50AEF392488BB81C182D96ED /* Pods_HeyBunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49B47782F0918F20351210 /* Pods_HeyBunnyTests.framework */; };
 		721FC88D28D8A17A00A1C46C /* NewsCardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721FC88C28D8A17A00A1C46C /* NewsCardDelegate.swift */; };
 		724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A896228CDB72400532575 /* BunnyViewModel.swift */; };
+		7253406D28D9A6DE007158C0 /* BunnyUsecaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253406C28D9A6DE007158C0 /* BunnyUsecaseStub.swift */; };
+		7253407128D9A9A7007158C0 /* NewsRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253407028D9A9A7007158C0 /* NewsRepositoryStub.swift */; };
+		7253407328D9AC13007158C0 /* BunnyUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253407228D9AC13007158C0 /* BunnyUsecaseTests.swift */; };
 		7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516028CB23FA007322FD /* NewsRepositoryTests.swift */; };
 		7257516428CB2751007322FD /* NewServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516328CB2751007322FD /* NewServiceStub.swift */; };
 		7257516628CB276E007322FD /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516528CB276E007322FD /* NewsService.swift */; };
@@ -58,6 +61,9 @@
 		498630D3313B0A7CC557F52E /* Pods-HeyBunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunnyTests/Pods-HeyBunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		721FC88C28D8A17A00A1C46C /* NewsCardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardDelegate.swift; sourceTree = "<group>"; };
 		724A896228CDB72400532575 /* BunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewModel.swift; sourceTree = "<group>"; };
+		7253406C28D9A6DE007158C0 /* BunnyUsecaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyUsecaseStub.swift; sourceTree = "<group>"; };
+		7253407028D9A9A7007158C0 /* NewsRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepositoryStub.swift; sourceTree = "<group>"; };
+		7253407228D9AC13007158C0 /* BunnyUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyUsecaseTests.swift; sourceTree = "<group>"; };
 		7257516028CB23FA007322FD /* NewsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepositoryTests.swift; sourceTree = "<group>"; };
 		7257516328CB2751007322FD /* NewServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceStub.swift; sourceTree = "<group>"; };
 		7257516528CB276E007322FD /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
@@ -149,7 +155,9 @@
 		7257516228CB273A007322FD /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				7253407028D9A9A7007158C0 /* NewsRepositoryStub.swift */,
 				7257516328CB2751007322FD /* NewServiceStub.swift */,
+				7253406C28D9A6DE007158C0 /* BunnyUsecaseStub.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 				7257516228CB273A007322FD /* Mock */,
 				72C6233A28CB1DDD0023A368 /* HeyBunnyTests.swift */,
 				7257516028CB23FA007322FD /* NewsRepositoryTests.swift */,
+				7253407228D9AC13007158C0 /* BunnyUsecaseTests.swift */,
 			);
 			path = HeyBunnyTests;
 			sourceTree = "<group>";
@@ -528,8 +537,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7253406D28D9A6DE007158C0 /* BunnyUsecaseStub.swift in Sources */,
 				7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */,
+				7253407328D9AC13007158C0 /* BunnyUsecaseTests.swift in Sources */,
 				72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */,
+				7253407128D9A9A7007158C0 /* NewsRepositoryStub.swift in Sources */,
 				7257516428CB2751007322FD /* NewServiceStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
