@@ -12,22 +12,23 @@ final class ImageManager {
     static let shared = ImageManager()
     let cachedImages = NSCache<NSString, NSData>()
     func fetchImage(from url: URL) async throws -> Data {
-        if let data = checkCache(url: url) {
-            return data
-        } else {
-            try await imageDiskCache(from: url)
-        }
-        guard let cacheData = bringDataFromCache(url: url) else {
-            return Data()
-        }
-        return cacheData
+        return try await URLSession.shared.data(from: url).0
+//        if let data = checkCache(url: url) {
+//            return data
+//        } else {
+//            try await imageDiskCache(from: url)
+//        }
+//        guard let cacheData = bringDataFromCache(url: url) else {
+//            return Data()
+//        }
+//        return cacheData
     }
     
     private func imageDiskCache(from url: URL) async throws {
         let downloadLocation = try await URLSession.shared.download(from: url).0
         let fileManager = FileManager.default
         let tempPath = downloadLocation.path
-        let imageName = url.query ?? ""
+        let imageName = url.lastPathComponent ?? ""
         
         guard let cacheDirectoryPath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first else { return }
         let finalPath = cacheDirectoryPath + "/" + imageName
@@ -44,7 +45,7 @@ final class ImageManager {
     }
     
     private func checkCache(url: URL) -> Data? {
-        let imageName = url.query ?? ""
+        let imageName = url.lastPathComponent ?? ""
         // CheckMemory
         if let imageData = bringDataFromCache(url: url) {
             return Data(imageData)
@@ -61,7 +62,7 @@ final class ImageManager {
     
     private func findDataInDiskMemory(from url: URL) -> NSData? {
         let fileManager = FileManager()
-        let imageName = url.query ?? ""
+        let imageName = url.lastPathComponent ?? ""
         guard let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first else { return nil }
         var filePath = URL(fileURLWithPath: path)
         filePath.appendPathComponent(imageName)
@@ -74,6 +75,6 @@ final class ImageManager {
     }
     
     private func bringDataFromCache(url: URL) -> Data? {
-        cachedImages.object(forKey: NSString(string: url.query ?? "")) as Data?
+        return cachedImages.object(forKey: NSString(string: url.lastPathComponent ?? "")) as Data?
     }
 }

@@ -10,6 +10,7 @@
 		11FA6B5F5A50553C6E6E7D62 /* Pods_HeyBunny_HeyBunnyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949D3428D7119DFBB415A634 /* Pods_HeyBunny_HeyBunnyUITests.framework */; };
 		4D717A92E381A617CA55D615 /* Pods_HeyBunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB833556110842C6BB142DE /* Pods_HeyBunny.framework */; };
 		50AEF392488BB81C182D96ED /* Pods_HeyBunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49B47782F0918F20351210 /* Pods_HeyBunnyTests.framework */; };
+		721FC88D28D8A17A00A1C46C /* NewsCardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721FC88C28D8A17A00A1C46C /* NewsCardDelegate.swift */; };
 		724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A896228CDB72400532575 /* BunnyViewModel.swift */; };
 		7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516028CB23FA007322FD /* NewsRepositoryTests.swift */; };
 		7257516428CB2751007322FD /* NewServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257516328CB2751007322FD /* NewServiceStub.swift */; };
@@ -20,10 +21,11 @@
 		7257517528CB472B007322FD /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257517428CB472B007322FD /* ImageManager.swift */; };
 		7257517828CB48A5007322FD /* BunnyUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257517728CB48A5007322FD /* BunnyUsecase.swift */; };
 		7257517A28CB493D007322FD /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257517928CB493D007322FD /* Entity.swift */; };
+		7263E0DD28D85CAE00A6C035 /* NewsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263E0DC28D85CAE00A6C035 /* NewsCellViewModel.swift */; };
+		726DB8CD28D06F9200882952 /* NewsCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DB8CC28D06F9200882952 /* NewsCardCell.swift */; };
 		72C6232428CB1DD90023A368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6232328CB1DD90023A368 /* AppDelegate.swift */; };
 		72C6232628CB1DD90023A368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6232528CB1DD90023A368 /* SceneDelegate.swift */; };
-		72C6232828CB1DD90023A368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6232728CB1DD90023A368 /* ViewController.swift */; };
-		72C6232B28CB1DD90023A368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C6232928CB1DD90023A368 /* Main.storyboard */; };
+		72C6232828CB1DD90023A368 /* BunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6232728CB1DD90023A368 /* BunnyViewController.swift */; };
 		72C6232D28CB1DDD0023A368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C6232C28CB1DDD0023A368 /* Assets.xcassets */; };
 		72C6233028CB1DDD0023A368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C6232E28CB1DDD0023A368 /* LaunchScreen.storyboard */; };
 		72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6233A28CB1DDD0023A368 /* HeyBunnyTests.swift */; };
@@ -54,6 +56,7 @@
 		226FDC72EC9024950B56EB37 /* Pods-HeyBunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeyBunnyTests/Pods-HeyBunnyTests.release.xcconfig"; sourceTree = "<group>"; };
 		40508C30C5C934B28D5ED6E0 /* Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunny-HeyBunnyUITests/Pods-HeyBunny-HeyBunnyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		498630D3313B0A7CC557F52E /* Pods-HeyBunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunnyTests/Pods-HeyBunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		721FC88C28D8A17A00A1C46C /* NewsCardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardDelegate.swift; sourceTree = "<group>"; };
 		724A896228CDB72400532575 /* BunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewModel.swift; sourceTree = "<group>"; };
 		7257516028CB23FA007322FD /* NewsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepositoryTests.swift; sourceTree = "<group>"; };
 		7257516328CB2751007322FD /* NewServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceStub.swift; sourceTree = "<group>"; };
@@ -64,11 +67,12 @@
 		7257517428CB472B007322FD /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		7257517728CB48A5007322FD /* BunnyUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyUsecase.swift; sourceTree = "<group>"; };
 		7257517928CB493D007322FD /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		7263E0DC28D85CAE00A6C035 /* NewsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellViewModel.swift; sourceTree = "<group>"; };
+		726DB8CC28D06F9200882952 /* NewsCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardCell.swift; sourceTree = "<group>"; };
 		72C6232028CB1DD90023A368 /* HeyBunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyBunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C6232328CB1DD90023A368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C6232528CB1DD90023A368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72C6232728CB1DD90023A368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72C6232A28CB1DD90023A368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72C6232728CB1DD90023A368 /* BunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewController.swift; sourceTree = "<group>"; };
 		72C6232C28CB1DDD0023A368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72C6232F28CB1DDD0023A368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72C6233128CB1DDD0023A368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +182,17 @@
 			path = usecase;
 			sourceTree = "<group>";
 		};
+		726DB8CB28D06F7500882952 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				72C6232728CB1DD90023A368 /* BunnyViewController.swift */,
+				726DB8CC28D06F9200882952 /* NewsCardCell.swift */,
+				7263E0DC28D85CAE00A6C035 /* NewsCellViewModel.swift */,
+				721FC88C28D8A17A00A1C46C /* NewsCardDelegate.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		72C6231728CB1DD90023A368 = {
 			isa = PBXGroup;
 			children = (
@@ -203,14 +218,13 @@
 		72C6232228CB1DD90023A368 /* HeyBunny */ = {
 			isa = PBXGroup;
 			children = (
+				726DB8CB28D06F7500882952 /* view */,
 				724A896128CDB62900532575 /* viewmodel */,
 				7257517628CB489A007322FD /* usecase */,
 				7257516F28CB43B3007322FD /* entity */,
 				7257516728CB2D8E007322FD /* network */,
 				72C6232328CB1DD90023A368 /* AppDelegate.swift */,
 				72C6232528CB1DD90023A368 /* SceneDelegate.swift */,
-				72C6232728CB1DD90023A368 /* ViewController.swift */,
-				72C6232928CB1DD90023A368 /* Main.storyboard */,
 				72C6232C28CB1DDD0023A368 /* Assets.xcassets */,
 				72C6232E28CB1DDD0023A368 /* LaunchScreen.storyboard */,
 				72C6233128CB1DDD0023A368 /* Info.plist */,
@@ -349,7 +363,6 @@
 			files = (
 				72C6233028CB1DDD0023A368 /* LaunchScreen.storyboard in Resources */,
 				72C6232D28CB1DDD0023A368 /* Assets.xcassets in Resources */,
-				72C6232B28CB1DD90023A368 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,13 +508,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */,
+				721FC88D28D8A17A00A1C46C /* NewsCardDelegate.swift in Sources */,
 				7257517828CB48A5007322FD /* BunnyUsecase.swift in Sources */,
-				72C6232828CB1DD90023A368 /* ViewController.swift in Sources */,
+				7263E0DD28D85CAE00A6C035 /* NewsCellViewModel.swift in Sources */,
+				72C6232828CB1DD90023A368 /* BunnyViewController.swift in Sources */,
 				72C6232428CB1DD90023A368 /* AppDelegate.swift in Sources */,
 				7257516628CB276E007322FD /* NewsService.swift in Sources */,
 				7257517528CB472B007322FD /* ImageManager.swift in Sources */,
 				72C6232628CB1DD90023A368 /* SceneDelegate.swift in Sources */,
 				7257517A28CB493D007322FD /* Entity.swift in Sources */,
+				726DB8CD28D06F9200882952 /* NewsCardCell.swift in Sources */,
 				7257517128CB43CF007322FD /* DTO.swift in Sources */,
 				7257516928CB2D9E007322FD /* NewsRepository.swift in Sources */,
 				7257516B28CB2ED1007322FD /* NewsAPI.swift in Sources */,
@@ -543,14 +559,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		72C6232928CB1DD90023A368 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72C6232A28CB1DD90023A368 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72C6232E28CB1DDD0023A368 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -689,7 +697,6 @@
 				INFOPLIST_FILE = HeyBunny/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -718,7 +725,6 @@
 				INFOPLIST_FILE = HeyBunny/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

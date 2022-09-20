@@ -25,6 +25,7 @@ final class ArticleEntity {
     let content: String
     private(set) var thumbnailImage: Data?
     private(set) var writeDate: String?
+    private(set) var moreDescriptionMode: Bool = false
     
     func setThumbnailImage(data: Data) {
         self.thumbnailImage = data
@@ -32,5 +33,9 @@ final class ArticleEntity {
     
     func setWriteDate(_ date: String) {
         self.writeDate = date
+    }
+    
+    func setMoreDescriptionMode(_ mode: Bool) {
+        moreDescriptionMode = mode
     }
 }

@@ -20,5 +20,8 @@ target 'HeyBunny' do
   pod 'RxRelay'
   pod 'SnapKit'
   pod 'Moya/RxSwift'
-
+  pod 'FlexLayout'
+  pod 'RxCocoa'
+  pod 'PinLayout'
+  pod 'RxDataSources'
 end
