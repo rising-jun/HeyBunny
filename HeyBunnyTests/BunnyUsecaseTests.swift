@@ -11,6 +11,8 @@ import RxSwift
 
 class BunnyUsecaseTests: XCTestCase {
     var usecase: BunnyManagable!
+    var repository: NewsRepository!
+    var service: NewsService!
     let disposeBag = DisposeBag()
    
     func test_BunnyUsecase에서_fetchNewsSingle가_호출되면_성공하고_newsModel을_업데이트한다() throws {

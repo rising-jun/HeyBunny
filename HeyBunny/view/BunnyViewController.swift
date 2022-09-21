@@ -13,7 +13,14 @@ import RxCocoa
 import RxDataSources
 
 final class BunnyViewController: UIViewController {
-    var viewModel = BunnyViewModel()
+    var viewModel: BunnyViewModelType? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            bind(to: viewModel)
+        }
+    }
     private let disposeBag = DisposeBag()
     private let cellButtonTapped = PublishRelay<Void>()
     
@@ -26,14 +33,13 @@ final class BunnyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        binding()
         view.backgroundColor = .blue
-        viewModel.viewDidLoad.accept(())
+        viewModel?.input.viewDidLoad.accept(())
     }
 }
 extension BunnyViewController {
-    func binding() {
-        viewModel.setViewAttribute
+    func bind(to viewModel: BunnyViewModelType) {
+        viewModel.output.setViewAttribute
             .withUnretained(self)
             .subscribe { (viewController, _) in
                 viewController.setLayout()
@@ -49,7 +55,7 @@ extension BunnyViewController {
                     
                     cell.viewModel
                         .moreButtonTapped
-                        .bind(to: self.viewModel.cellButtonTapped)
+                        .bind(to: viewModel.input.cellButtonTapped)
                         .disposed(by: self.disposeBag)
                     
                     return cell
@@ -57,27 +63,27 @@ extension BunnyViewController {
                 return UITableViewCell()
             })
         
-        viewModel.articleRelay
+        viewModel.output.articleRelay
             .map { [SectionOfCustomData(items: $0)] }
             .bind(to: newsTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
-        viewModel.newsFetchError
+        viewModel.output.newsFetchError
             .bind { error in
                 print("error!! \(error)")
             }.disposed(by: disposeBag)
         
-        viewModel.updateArticleImage
+        viewModel.output.updateArticleImage
             .withUnretained(self)
             .observe(on: MainScheduler.instance)
             .bind { (viewController, item) in
                 viewController.newsTableView.reloadRows(at: [IndexPath(row: item, section: 0)], with: .automatic)
             }.disposed(by: disposeBag)
         
-        viewModel.cellButtonTapped
+        viewModel.input.cellButtonTapped
             .withUnretained(self)
             .bind { (viewController, indexPath) in
-                viewController.viewModel.articleRelay.do { articles in
+                viewModel.output.articleRelay.do { articles in
                     articles[indexPath.row].setMoreDescriptionMode(true)
                 }
                 viewController.newsTableView.reconfigureRows(at: [indexPath])
@@ -86,8 +92,6 @@ extension BunnyViewController {
         newsTableView.delegate = self
         newsTableView.allowsSelection = false
         newsTableView.allowsSelectionDuringEditing = true
-        
-        
     }
     
     private func setLayout() {

@@ -1,0 +1,6 @@
+framework module Pods_HeyBunny {
+  umbrella header "Pods-HeyBunny-umbrella.h"
+
+  export *
+  module * { export * }
+}
