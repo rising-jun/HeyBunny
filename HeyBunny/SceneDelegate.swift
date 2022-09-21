@@ -10,13 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private let dependencyInject = DependencyInjector()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let sceneWindow = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: sceneWindow)
         let bunnyView = BunnyViewController()
-        bunnyView.viewModel = BunnyViewModel()
+        bunnyView.dependency = dependencyInject.injectBunnyDependency()
         window.rootViewController = bunnyView
         window.makeKeyAndVisible()
         self.window = window

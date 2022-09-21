@@ -14,8 +14,12 @@ protocol BunnyManagable {
 }
 
 final class BunnyUsecase {
-    var repository: NewsRepository = NewsRepositoryImpl()
+    var repository: NewsRepository
     private let disposeBag = DisposeBag()
+    
+    init(repository: NewsRepository) {
+        self.repository = repository
+    }
 }
 extension BunnyUsecase: BunnyManagable {
     func fetchNewsSingle() -> Single<News> {

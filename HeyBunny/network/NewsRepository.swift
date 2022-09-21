@@ -9,6 +9,9 @@ import RxSwift
 
 final class NewsRepositoryImpl {
     var koreaNewsService: NewsService = NewsServiceImpl()
+    init(service: NewsService) {
+        self.koreaNewsService = service
+    }
 }
 extension NewsRepositoryImpl: NewsRepository {
     func requestKoreaNewsAPI() -> Single<News> {

@@ -16,7 +16,7 @@ protocol BunnyViewModelType {
 }
 
 final class BunnyViewModel {
-    var usecase: BunnyManagable = BunnyUsecase()
+    var usecase: BunnyManagable
     private let disposeBag = DisposeBag()
 
     var input = Input()
@@ -35,7 +35,9 @@ final class BunnyViewModel {
         var updateCell = PublishRelay<IndexPath>()
     }
     
-    init() {
+    init(managable: BunnyManagable) {
+        self.usecase = managable
+        
         input.viewDidLoad
             .withUnretained(self)
             .map { (viewModel, _) in
