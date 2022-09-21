@@ -14,7 +14,7 @@ class BunnyViewModelTests: XCTestCase {
     var viewModel: BunnyViewModelType!
     let disposeBag = DisposeBag()
     
-    func test_BunnyViewModel에서_fetchNewsThumbnailImages가_호출되면_성공하고_articleimage가_업데이트된다() throws {
+    func test_BunnyViewModel에서_viewDidload가_호출되면_attrubute가_호출되며_성공하고_article이_업데이트된다() throws {
         //give
         let scheduler = TestScheduler(initialClock: 0)
         let articleObserver = scheduler.createObserver(Int.self)
@@ -51,7 +51,7 @@ class BunnyViewModelTests: XCTestCase {
         XCTAssertEqual(attributeObserver.events, [.next(10, true)])
     }
     
-    func test_BunnyViewModel에서_fetchNewsThumbnailImages가_호출되면_실패하고_networkerror를_반환한다() throws {
+    func test_BunnyViewModel에서_viewDidload가_호출되면_attrubute가_호출되며_실패하고_networkerror가_반환된다() throws {
         //give
         let scheduler = TestScheduler(initialClock: 0)
         let attributeObserver = scheduler.createObserver(Bool.self)
