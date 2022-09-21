@@ -13,6 +13,15 @@ import RxCocoa
 import RxDataSources
 
 final class BunnyViewController: UIViewController {
+    var dependency: BunnyDependency? {
+        didSet {
+            guard let dependency = dependency else {
+                return
+            }
+            self.viewModel = dependency.viewModel
+        }
+    }
+    
     var viewModel: BunnyViewModelType? {
         didSet {
             guard let viewModel = viewModel else {

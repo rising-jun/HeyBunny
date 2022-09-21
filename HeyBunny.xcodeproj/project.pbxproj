@@ -34,7 +34,7 @@
 		72C6234528CB1DDD0023A368 /* HeyBunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */; };
 		72C6234728CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */; };
 		72FB9F5428DB0FB2005E0C48 /* BunnyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */; };
-
+		72FB9F5628DB16FD005E0C48 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5528DB16FD005E0C48 /* DependencyInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +88,7 @@
 		72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBunnyUITests.swift; sourceTree = "<group>"; };
 		72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBunnyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewModelTests.swift; sourceTree = "<group>"; };
+		72FB9F5528DB16FD005E0C48 /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		89ABCD971BF3D0E6C66C04D4 /* Pods-HeyBunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunny/Pods-HeyBunny.debug.xcconfig"; sourceTree = "<group>"; };
 		9181DE796AB614040B75F6D2 /* Pods-HeyBunny-HeyBunnyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny-HeyBunnyUITests.release.xcconfig"; path = "Target Support Files/Pods-HeyBunny-HeyBunnyUITests/Pods-HeyBunny-HeyBunnyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		949D3428D7119DFBB415A634 /* Pods_HeyBunny_HeyBunnyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyBunny_HeyBunnyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +237,7 @@
 				72C6232C28CB1DDD0023A368 /* Assets.xcassets */,
 				72C6232E28CB1DDD0023A368 /* LaunchScreen.storyboard */,
 				72C6233128CB1DDD0023A368 /* Info.plist */,
+				72FB9F5528DB16FD005E0C48 /* DependencyInjector.swift */,
 			);
 			path = HeyBunny;
 			sourceTree = "<group>";
@@ -517,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FB9F5628DB16FD005E0C48 /* DependencyInjector.swift in Sources */,
 				724A896328CDB72400532575 /* BunnyViewModel.swift in Sources */,
 				7257517828CB48A5007322FD /* BunnyUsecase.swift in Sources */,
 				7263E0DD28D85CAE00A6C035 /* NewsCellViewModel.swift in Sources */,
