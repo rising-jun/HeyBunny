@@ -34,7 +34,7 @@
 		72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6233A28CB1DDD0023A368 /* HeyBunnyTests.swift */; };
 		72C6234528CB1DDD0023A368 /* HeyBunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */; };
 		72C6234728CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */; };
-		72FB9F5328DAE799005E0C48 /* BunnyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */; };
+		72FB9F5428DB0FB2005E0C48 /* BunnyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -546,6 +546,7 @@
 				72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */,
 				7253407128D9A9A7007158C0 /* NewsRepositoryStub.swift in Sources */,
 				7257516428CB2751007322FD /* NewServiceStub.swift in Sources */,
+				72FB9F5428DB0FB2005E0C48 /* BunnyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
