@@ -44,7 +44,7 @@ final class NewsServiceImpl: NewsService {
     }
 }
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case network
     case parsing
 }

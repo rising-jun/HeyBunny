@@ -15,7 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let sceneWindow = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: sceneWindow)
-        window.rootViewController = BunnyViewController()
+        let bunnyView = BunnyViewController()
+        bunnyView.viewModel = BunnyViewModel()
+        window.rootViewController = bunnyView
         window.makeKeyAndVisible()
         self.window = window
     }
