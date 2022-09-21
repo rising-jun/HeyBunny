@@ -12,16 +12,15 @@ final class ImageManager {
     static let shared = ImageManager()
     let cachedImages = NSCache<NSString, NSData>()
     func fetchImage(from url: URL) async throws -> Data {
-        return try await URLSession.shared.data(from: url).0
-//        if let data = checkCache(url: url) {
-//            return data
-//        } else {
-//            try await imageDiskCache(from: url)
-//        }
-//        guard let cacheData = bringDataFromCache(url: url) else {
-//            return Data()
-//        }
-//        return cacheData
+        if let data = checkCache(url: url) {
+            return data
+        } else {
+            try await imageDiskCache(from: url)
+        }
+        guard let cacheData = bringDataFromCache(url: url) else {
+            return Data()
+        }
+        return cacheData
     }
     
     private func imageDiskCache(from url: URL) async throws {
