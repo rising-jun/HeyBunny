@@ -34,6 +34,7 @@
 		72C6234528CB1DDD0023A368 /* HeyBunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */; };
 		72C6234728CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */; };
 		72FB9F5428DB0FB2005E0C48 /* BunnyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
