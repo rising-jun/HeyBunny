@@ -543,7 +543,6 @@
 				7253406D28D9A6DE007158C0 /* BunnyUsecaseStub.swift in Sources */,
 				7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */,
 				7253407328D9AC13007158C0 /* BunnyUsecaseTests.swift in Sources */,
-				72FB9F5328DAE799005E0C48 /* BunnyViewModelTests.swift in Sources */,
 				72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */,
 				7253407128D9A9A7007158C0 /* NewsRepositoryStub.swift in Sources */,
 				7257516428CB2751007322FD /* NewServiceStub.swift in Sources */,

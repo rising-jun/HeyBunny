@@ -1,0 +1,6 @@
+framework module Pods_HeyBunny_HeyBunnyUITests {
+  umbrella header "Pods-HeyBunny-HeyBunnyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
