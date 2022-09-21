@@ -11,18 +11,21 @@ import RxSwift
 
 class NewsRepositoryTests: XCTestCase {
     var newsService: NewsService!
+    var repository: NewsRepository!
     let disposebag = DisposeBag()
     
-    func test_NewsRepository에서_getKoreaNewsAPI가_호출되면_성공하고_modelCount를_업데이트한다() throws {
+    func test_NewsRepository에서_requestKoreaNewsAPI가_호출되면_성공하고_modelCount를_업데이트한다() throws {
 
         //give
         let didFinish = expectation(description: #function)
         newsService = NewsServiceStub(result: true)
+        repository = NewsRepositoryImpl()
+        repository.koreaNewsService = newsService
         var result = false
         var modelCount = 0
        
         //when
-        let resultObservable = newsService.getKoreaNewsAPI()
+        let resultObservable = repository.requestKoreaNewsAPI()
         resultObservable.subscribe { news in
             modelCount = news.articles.count
             result = true
@@ -39,15 +42,17 @@ class NewsRepositoryTests: XCTestCase {
         XCTAssertEqual(modelCount, 1)
     }
     
-    func test_NewsRepository에서_getKoreaNewsAPI가_호출되면_실패하고_failure를_호출한다() throws {
+    func test_NewsRepository에서_requestKoreaNewsAPI가_호출되면_실패하고_failure를_호출한다() throws {
 
         //give
         let didFinish = expectation(description: #function)
         newsService = NewsServiceStub(result: false)
+        repository = NewsRepositoryImpl()
+        repository.koreaNewsService = newsService
         var result = false
         
         //when
-        let resultObservable = newsService.getKoreaNewsAPI()
+        let resultObservable = repository.requestKoreaNewsAPI()
         resultObservable.subscribe { news in
             result = false
             didFinish.fulfill()

@@ -34,6 +34,7 @@
 		72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6233A28CB1DDD0023A368 /* HeyBunnyTests.swift */; };
 		72C6234528CB1DDD0023A368 /* HeyBunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */; };
 		72C6234728CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */; };
+		72FB9F5328DAE799005E0C48 /* BunnyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		72C6234028CB1DDD0023A368 /* HeyBunnyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyBunnyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C6234428CB1DDD0023A368 /* HeyBunnyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBunnyUITests.swift; sourceTree = "<group>"; };
 		72C6234628CB1DDD0023A368 /* HeyBunnyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBunnyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunnyViewModelTests.swift; sourceTree = "<group>"; };
 		89ABCD971BF3D0E6C66C04D4 /* Pods-HeyBunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny.debug.xcconfig"; path = "Target Support Files/Pods-HeyBunny/Pods-HeyBunny.debug.xcconfig"; sourceTree = "<group>"; };
 		9181DE796AB614040B75F6D2 /* Pods-HeyBunny-HeyBunnyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyBunny-HeyBunnyUITests.release.xcconfig"; path = "Target Support Files/Pods-HeyBunny-HeyBunnyUITests/Pods-HeyBunny-HeyBunnyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		949D3428D7119DFBB415A634 /* Pods_HeyBunny_HeyBunnyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyBunny_HeyBunnyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +249,7 @@
 				72C6233A28CB1DDD0023A368 /* HeyBunnyTests.swift */,
 				7257516028CB23FA007322FD /* NewsRepositoryTests.swift */,
 				7253407228D9AC13007158C0 /* BunnyUsecaseTests.swift */,
+				72FB9F5228DAE799005E0C48 /* BunnyViewModelTests.swift */,
 			);
 			path = HeyBunnyTests;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				7253406D28D9A6DE007158C0 /* BunnyUsecaseStub.swift in Sources */,
 				7257516128CB23FA007322FD /* NewsRepositoryTests.swift in Sources */,
 				7253407328D9AC13007158C0 /* BunnyUsecaseTests.swift in Sources */,
+				72FB9F5328DAE799005E0C48 /* BunnyViewModelTests.swift in Sources */,
 				72C6233B28CB1DDD0023A368 /* HeyBunnyTests.swift in Sources */,
 				7253407128D9A9A7007158C0 /* NewsRepositoryStub.swift in Sources */,
 				7257516428CB2751007322FD /* NewServiceStub.swift in Sources */,

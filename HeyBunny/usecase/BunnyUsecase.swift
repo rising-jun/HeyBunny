@@ -9,7 +9,6 @@ import RxSwift
 
 protocol BunnyManagable {
     var repository: NewsRepository { get set }
-    
     func fetchNewsSingle() -> Single<News>
     func fetchNewsImages(from entity: ArticleEntity) async throws -> Data?
 }

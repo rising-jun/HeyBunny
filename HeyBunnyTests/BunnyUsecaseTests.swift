@@ -10,8 +10,7 @@ import XCTest
 import RxSwift
 
 class BunnyUsecaseTests: XCTestCase {
-    var repository: NewsRepository!
-    var service: NewsService!
+    var usecase: BunnyManagable!
     let disposeBag = DisposeBag()
    
     func test_BunnyUsecase에서_fetchNewsSingle가_호출되면_성공하고_newsModel을_업데이트한다() throws {
@@ -20,11 +19,12 @@ class BunnyUsecaseTests: XCTestCase {
         let expectResult = true
         var testResult = false
         var newsModel: News?
-        service = NewsServiceStub(result: expectResult)
-        repository = NewsRepositoryStub(expectResult: expectResult, service: service)
-        
+        let repository: NewsRepository = NewsRepositoryStub(expectResult: expectResult, service: NewsServiceStub(result: expectResult))
+        usecase = BunnyUsecase()
+        usecase.repository = repository
+
         //when
-        let newsSingle = repository.requestKoreaNewsAPI()
+        let newsSingle = usecase.fetchNewsSingle()
         newsSingle.subscribe { news in
             newsModel = news
             testResult = true
@@ -45,11 +45,12 @@ class BunnyUsecaseTests: XCTestCase {
         let didFinish = expectation(description: #function)
         let expectResult = false
         var testResult = false
-        service = NewsServiceStub(result: expectResult)
-        repository = NewsRepositoryStub(expectResult: expectResult, service: service)
+        let repository: NewsRepository = NewsRepositoryStub(expectResult: expectResult, service: NewsServiceStub(result: expectResult))
+        usecase = BunnyUsecase()
+        usecase.repository = repository
         
         //when
-        let newsSingle = repository.requestKoreaNewsAPI()
+        let newsSingle = usecase.fetchNewsSingle()
         newsSingle.subscribe { news in
             testResult = false
             didFinish.fulfill()
